@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="utf-8"/>
+<title>Zegar</title>
+<meta name="description" content="Prosty zegar" />
+<meta name="keywords" content="Zegar" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+<meta name="author" content="Zapomniane Dzieje" />
+<link rel="stylesheet" href="style.css" type="text/css"/>
+
+
+</head>
+<body onload="odliczanie();">
+        <div class="hero"> 
+             <div class="container">
+			       <div class="clock">
+				          <span id="hrs">00</span>
+						  <span>:</span>
+					      <span id="min">00</span>
+						  <span>:</span>
+						  <span id="seconds">00</span>
+				   </div>
+			 </div>
+        </div>
+<script>
+function odliczanie()
+{
+let hrs = document.getElementById("hrs");
+let min = document.getElementById("min");
+let seconds = document.getElementById("seconds");
+
+let currentTime= new Date();
+hrs.innerHTML = currentTime.getHours();
+
+min.innerHTML = currentTime.getMinutes();
+
+seconds.innerHTML = currentTime.getSeconds();
+
+setTimeout("odliczanie()",1000)
+}
+</script>
+</body>
+
+
+</html>
